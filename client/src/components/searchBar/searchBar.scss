@@ -1,3 +1,5 @@
+@use "../../styles/responsive.scss" as *;
+
 .searchBar{
     .types{
         button{
@@ -5,12 +7,81 @@
             border: 1px solid #999;
             cursor: pointer;
             background-color: white;
+            border-bottom: none;
             
             &.active{
                 background-color: black;
                 color: white;
+                text-transform: uppercase;
+            }
+            
+            &:first-child{
+                border-right: none;
+                border-top-left-radius: 5%;
+            }
+
+            &:last-child{
+                border-left: none;
+                border-top-right-radius: 5%;
+            }
+            
+            @include sm {
+                border-bottom: 1px solid #999;
+            } 
+
+        }
+    }
+
+    form{
+        border: 1px solid #999;
+        display: flex;
+        height: 5vh ;
+
+        @include sm{
+            flex-direction: column;
+            gap: 2vh;
+            padding-top: 2%;
+            border: none;
+        }
+
+        input{
+            flex : 2;
+            border: none;
+            padding: 0 2%;
+
+            @include sm {
+                width: auto;
+                padding: 2vh;
+                border: 1px solid #999;
+
             }
         }
-    
+
+        button{
+            border: none;
+            flex: 0.5;
+            background-color: #fece51;
+            
+            @include md{
+                flex : 1;
+                padding: 6px;
+            }
+           
+        }
+        img{
+            width: 40%;
+            height: 40%;
+
+            @include sm{
+                width: auto;
+                height: auto;
+            }
+
+            @include sm {
+                width: auto;
+                height: auto;
+            }
+        }
+
     }
 }

@@ -49,6 +49,10 @@ nav{
                 }    
             }
         }
+
+        @include sm{
+            justify-content: start;
+        }
     }
     
     .right{

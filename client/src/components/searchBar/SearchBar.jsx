@@ -4,7 +4,7 @@ import './searchBar.scss'
 
 function SearchBar() {
     const [query, setQuery] = useState({
-        type : "buy",
+        type : "Buy",
         location : "",
         minPrice : 0,
         maxPrice : 10000000,
