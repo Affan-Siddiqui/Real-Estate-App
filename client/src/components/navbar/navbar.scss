@@ -1,0 +1,119 @@
+@use "../../styles/responsive.scss" as *;
+
+nav{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        // display: inline-block;
+        transition: all 0.4s ease;
+        
+        &:hover{
+            scale: 1.05;
+        }
+
+        @include sm{
+            display: none;
+        }
+    }
+    
+    .left{
+        height: inherit;
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 6%;
+
+        .logo{
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            gap: 5%;
+
+            img{
+                width: 20%;
+            }
+
+            span{
+                @include md{
+                    display: none;
+                }  
+                @include sm{
+                    display: initial;
+                }    
+            }
+        }
+    }
+    
+    .right{
+        height: inherit;
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // gap: 10%;
+        background-color: #fcf5f3;
+        
+        a{
+            padding: 2% 5%;
+            margin: 4%;
+        }
+
+        .register{
+            background-color: #fefe51;
+        }
+
+        @include md{
+            background-color: transparent;
+        }
+    }
+
+    .menuIcon{
+        display: none;
+        z-index: 2;
+
+        img{
+            width: 50%;
+        }
+
+        @include sm{
+            display: flex;
+            justify-content: end;
+            cursor: pointer;
+        }
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        right: -50%;
+        background-color: black;
+        color: white;
+        height: 100vh;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+
+        transition: all 1s ease;
+
+        &.active{
+            right: 0;
+        }
+
+        a{
+            @include sm{
+                display: initial;
+            }
+        }
+
+    }
+}

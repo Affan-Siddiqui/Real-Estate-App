@@ -1,0 +1,16 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    overflow: hidden;
+    font-family: var(--primary-font);
+}
+

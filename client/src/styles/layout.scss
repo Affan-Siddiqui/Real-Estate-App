@@ -1,0 +1,27 @@
+
+@use "./responsive.scss" as *;
+
+.layout{
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 0.5%;
+    display: flex;
+    flex-direction: column;
+
+    .content{
+        flex: 1;
+    }
+    
+    @include lg{
+        // background-color: red;
+    }
+    
+    @include md{
+        // background-color: blue;
+    }
+    
+    @include sm{
+        // background-color: yellow;
+    }
+}
